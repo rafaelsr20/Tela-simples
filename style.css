@@ -1,0 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f6f2f2;
+}
+
+/* Estilos para o header */
+header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 60px;
+    background-color: #f6f2f2;
+}
+/*Estilzação do nome da loja*/
+.nome-loja{
+    font-size: 50px;
+    color: #333333;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+}
+
+/* Estilos do Banner(Black friday) */
+header img {
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    z-index: 0;
+
+}
+
+/* Menu com sessões*/
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #201537;
+    z-index: 2;
+}
+
+/* Estilo do ícone do hambúrguer */
+.hamburguer-menu {
+    display:none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilo para a lista de navegação */
+#menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para cada item do menu */
+#menu-list li {
+    margin: 0 15px;
+}
+
+#menu-list li a {
+    text-decoration: none;
+    color: #0e120e;
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    /* O menu será oculto por padrão */
+    #menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #534f4f;
+        box-shadow: 0px 4px 6px rgba(207, 102, 102, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+        width: 200px;
+    }
+
+    /* Exibe o menu quando o checkbox for marcado */
+    #menu-toggle:checked + .hamburguer-menu + #menu-list {
+        display: flex;
+    }
+
+    /* Exibe o ícone do hambúrguer em telas pequenas */
+    .hamburguer-menu {
+        display:block;
+    }
+}
+
+/* Menu horizontal para telas maiores que 768px */
+@media (min-width: 769px) {}
+    #menu-list {
+        display: flex;  /* Menu exibido horizontalmente */
+    }
+
+    /* Esconde o ícone do hambúrguer em telas grandes */
+    .hamburguer-menu {
+        display: none;
+    }
+    #menu-toggle{display:none;
+    }
+
+/* Barra de pesquisa */
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Corpo da página */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para cada seção de produto */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Lista de produtos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo para cada item do produto */
+.product-item {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgb(21, 21, 21);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ffffff;
+}
